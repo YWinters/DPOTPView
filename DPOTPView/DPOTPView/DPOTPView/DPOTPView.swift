@@ -122,8 +122,8 @@ public protocol DPOTPViewDelegate {
             arrTextFields.forEach { $0.text = nil }
             for i in 0 ..< arrTextFields.count {
                 if i < (newValue?.count ?? 0) {
-                    if let txt = newValue?[i..<i+1] , let code = Int(txt) {
-                        arrTextFields[i].text = String(code)
+                    if let txt = newValue?[i..<i+1] {
+                        arrTextFields[i].text = txt
                     }
                 }
             }
